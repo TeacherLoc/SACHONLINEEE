@@ -1,0 +1,33 @@
+﻿@model IEnumerable<SachOnline.Models.SACH>
+
+<h2 class="text-center">SÁCH BÁN NHIỀU</h2>
+<div class="row">
+    <div class="col-lg-6 col-md-6">
+        @foreach (var sach in Model.Take(3))
+        {
+            <div class="media-object-default">
+                <div class="media">
+                    <div class="media-left"> <a href="#"> <img class="media-object imgsachbannhieu" src="~/Images/@sach.AnhBia" alt="placeholder image"> </a> </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">@sach.TenSach</h4>
+                        @sach.MoTa
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="col-lg-6 col-md-6">
+        @foreach (var sach in Model.Skip(3).Take(3))
+        {
+            <div class="media-object-default">
+                <div class="media">
+                    <div class="media-left"> <a href="#"> <img class="media-object imgsachbannhieu" src="~/Images/@sach.AnhBia" alt="placeholder image"> </a> </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">@sach.TenSach</h4>
+                        @sach.MoTa
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

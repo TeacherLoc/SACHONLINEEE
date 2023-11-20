@@ -1,0 +1,105 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .login {
+            width: 500px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .boxBody {
+            text-align: center;
+        }
+
+        h4 {
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 90%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .rLink {
+            font-size: 12px;
+            color: #0077ff;
+            text-decoration: none;
+        }
+
+            .rLink:hover {
+                text-decoration: underline;
+            }
+
+        .btnLogin {
+            width: 100%;
+            background: #0077ff;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+            .btnLogin:hover {
+                background: #0055aa;
+            }
+
+        p {
+            font-style: italic;
+            color: red;
+            margin: 0;
+            margin-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="~/Admin/Admin/Login" method="post" class="box login">
+        <fieldset class="boxBody">
+            <h4>LOGIN ADMIN</h4>
+            <label>Username</label>
+            <input type="text" tabindex="1" name="UserName" placeholder="Type your username" required>
+            <label>Password</label>
+            <input type="password" tabindex="2" name="Password" placeholder="Type your password" required>
+            <p>@ViewBag.ThongBao</p>
+            <label><input type="checkbox" tabindex="3">Keep me logged in</label>
+            <label>
+                <a href="#" class="rLink" tabindex="5">Forget your password?</a>
+            </label>
+        </fieldset>
+        <footer>
+            <input type="submit" class="btnLogin" value="Login" tabindex="4">
+        </footer>
+    </form>
+</body>
+</html>
